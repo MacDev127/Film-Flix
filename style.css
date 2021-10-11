@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #003566;
+    --secondary-color: #001D3D;
+    --third-color: #001029;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    color: #fff;
+    width: 1;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    outline: none;
+    background: var(--primary-color);
+    background-color: transparent;
+}
+
+.fas {
+    position: absolute;
+    right: 5%;
+    padding-top: 11px;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+#form a {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* ----------------Film Cards------------------------ */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.film img {
+    width: 100%;
+}
+
+.film {
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.film-info {
+    color: #fff;
+    display: flex;
+    font-weight: 300;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.film-info h3 {
+    margin-top: 0;
+}
+
+.film-info span {
+    background-color: var(--primary-color);
+    padding: .25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.film-info span.green {
+    color: rgb(26, 124, 26);
+}
+
+.film-info span.orange {
+    color: orange;
+}
+
+.film-info span.red {
+    color: red;
+}
+
+.overview {
+    background-color: var(--third-color);
+    color: #fff;
+    position: absolute;
+    padding: 2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.4s ease-in;
+    opacity: 0.97;
+    cursor: pointer;
+}
+
+.film:hover .overview {
+    transform: translateY(0);
+}
+
+
+/* ----------------Film Cards end------------------------ */
+
+
+/* --------Media Queries--------- */
+
+@media screen and (min-width: 2000px) {
+    .fas {
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .fas {
+        position: absolute;
+        right: 4%;
+        padding-top: 11px;
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .fas {
+        position: absolute;
+        right: 5%;
+        padding-top: 11px;
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fas {
+        position: absolute;
+        right: 7%;
+        padding-top: 11px;
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fas {
+        right: 35%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .fas {
+        position: absolute;
+        right: 30%;
+        padding-top: 11px;
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .fas {
+        right: 30%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .fas {
+        right: 28%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .fas {
+        right: 22%;
+    }
+}
