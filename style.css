@@ -143,6 +143,16 @@ main {
 
 /* ----------------Film Cards end------------------------ */
 
+footer {
+    padding-top: 10px;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+
 
 /* --------Media Queries--------- */
 
